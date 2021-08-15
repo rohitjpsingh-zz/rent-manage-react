@@ -2,7 +2,7 @@
   "name": "admin-antd-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://139.59.79.228/rukkor-crm/v2/admin/",
+  "homepage": "/",
   "dependencies": {
     "antd": "^4.16.2",
     "axios": "^0.21.1",
