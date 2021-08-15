@@ -129,7 +129,7 @@ function ResetPassword(props) {
             </Row>
           </div>
         </Content>
-        <LoginBottom />
+        {/* <LoginBottom /> */}
       </Layout>
     </Fragment>
   );

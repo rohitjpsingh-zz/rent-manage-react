@@ -117,7 +117,7 @@ function ForgotPassword(props) {
             )}
           </div>
         </Content>
-        <LoginBottom />
+        {/* <LoginBottom /> */}
       </Layout>
     </Fragment>
   );
