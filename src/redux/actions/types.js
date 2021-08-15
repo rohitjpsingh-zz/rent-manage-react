@@ -1,0 +1,42 @@
+// API URL
+export const API_URL = (process.env.REACT_APP_NODE_ENV !== 'production') ? process.env.REACT_APP_API_LOCAL_URL : process.env.REACT_APP_API_LIVE_URL ;
+
+// SETTING
+export const GET_SETTING ='GET_SETTING'
+
+// AUTH
+export const AUTH_LOGIN = 'AUTH_LOGIN';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT';
+export const AUTH_ERROR = 'AUTH_ERROR';
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+export const GET_PROFILE = 'GET_PROFILE';
+
+// ALERT
+export const SET_ALERT = 'SET_ALERT';
+export const REMOVE_ALERT = 'REMOVE_ALERT';
+
+// USER
+export const GET_USER = 'GET_USER';
+export const GET_USERS = 'GET_USERS';
+export const UPDATE_USER = 'UPDATE_USER';
+
+// CONTACT
+export const ADD_CONTACT = 'ADD_CONTACT';
+export const UPDATE_CONTACT = 'UPDATE_CONTACT';
+export const GET_CONTACTS = 'GET_CONTACTS';
+export const GET_CONTACT = 'GET_CONTACT';
+export const DELETE_CONTACT = 'DELETE_CONTACT';
+
+export const ADD_CONTACT_NOTES = 'ADD_CONTACT_NOTES';
+export const GET_CONTACT_NOTES = 'GET_CONTACT_NOTES';
+export const GET_CONTACT_LOGS = 'GET_CONTACT_LOGS';
+export const REDIRECT_CONTACT = 'REDIRECT_CONTACT';
+export const SORT_CONTACT_FIELD = 'SORT_CONTACT_FIELD';
+export const PAGINATE_CONTACTS = 'PAGINATE_CONTACTS';
+export const IMPORT_CONTACTS = 'IMPORT_CONTACTS';
+export const NEW_DEAL = 'NEW_DEAL';
+export const APPEND_CONTACTS = 'APPEND_CONTACTS';
+export const SET_CONTACT_FILTER_FIELDS = 'SET_CONTACT_FILTER_FIELDS';
+
+// THEME
+export const APPLY_THEME = 'APPLY_THEME ';
