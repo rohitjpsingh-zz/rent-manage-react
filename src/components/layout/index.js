@@ -100,7 +100,7 @@ function MyLayout(props) {
             {theme && theme.latest_theme && theme.latest_theme.mode == 'dark' ? (<img src={`assets/images/zellry_sign_white.svg`} alt="zellry" />) : (<img src={`assets/images/zellry_sign_black.svg`} alt="zellry" />) }     
           </NavLink>
         </div> */}
-        <LeftMenu location={props.location} />
+        <LeftMenu {...props} location={props.location} />
       </Header>
       <Content style={{ padding: "0 50px" }}>
         <Alert />

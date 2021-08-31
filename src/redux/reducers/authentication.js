@@ -7,7 +7,7 @@ import { isLogin, getLoginData } from "../../utils/auth";
 
 const initialState = { 
   login: (isLogin()) ? true : false, 
-  user: (isLogin()) ? getLoginData().user : null, 
+  // user: (isLogin()) ? getLoginData().user : null, 
   won_deal_ratio:'',
   lost_deal_ratio:'',
   error:null 

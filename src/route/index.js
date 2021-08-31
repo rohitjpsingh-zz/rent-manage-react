@@ -17,16 +17,16 @@ function AppRouter() {
   return (
     <Fragment>
       <Switch>      
-        <PublicRoute restricted={true} exact path='/' component={Login} />
-        <PublicRoute restricted={true} path="/login" component={Login} />
-        <PublicRoute restricted={true} path="/forgot-password" component={ForgotPassword} />
-        <PublicRoute restricted={true} path="/reset-password/:token" component={ResetPassword} />
+        <PublicRoute exact path='/' component={Login} />
+        <PublicRoute path="/login" component={Login} />
+        <PublicRoute path="/forgot-password" component={ForgotPassword} />
+        <PublicRoute path="/reset-password/:token" component={ResetPassword} />
 
-        <PrivateRoute path="/dashboard" component={Dashboard} />      
-        <PrivateRoute path="/property-detail/:id" component={CompanyDetail} />      
-        <PrivateRoute path="/user-detail/:id" component={UserDetail} />      
-        <PrivateRoute path="/departments" component={Dashboard} />      
-        <PrivateRoute path="/users" component={Dashboard} />      
+        <PublicRoute path="/dashboard" component={Dashboard} />      
+        <PublicRoute path="/property-detail/:id" component={CompanyDetail} />      
+        <PublicRoute path="/user-detail/:id" component={UserDetail} />      
+        <PublicRoute path="/departments" component={Dashboard} />      
+        <PublicRoute path="/users" component={Dashboard} />      
         <PublicRoute component={NotFound} />
       </Switch>
     </Fragment>

@@ -30,7 +30,7 @@ function AddEditDepartmentUserModal(props) {
   const dispatch = useDispatch();
 
   const current_user_id = useSelector(
-    (state) => (state.auth && state.auth.user._id) || ""
+    (state) => (state.auth && state.auth.user && state.auth.user._id) || ""
   );
 
   const onFinish = async (form_values) => {

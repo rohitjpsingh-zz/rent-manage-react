@@ -31,7 +31,8 @@ function Login(props) {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     var login_data = { email: values.email, password: values.password };
-    props.authLogin(props, login_data);
+    props.history.push("/dashboard");
+    // props.authLogin(props, login_data);
   };
 
   return (

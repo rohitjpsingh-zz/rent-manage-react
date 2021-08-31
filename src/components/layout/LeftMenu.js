@@ -1,16 +1,17 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,useHistory  } from "react-router-dom";
 import { Menu } from "antd";
 import { useTranslation, Trans } from 'react-i18next';
 import { darkTheme, lightTheme } from '../themes/Themes';
 import { applyTheme } from '../../redux/actions/theme';
-import {useSelector, useDispatch} from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
 import { HomeIcon, DeptIcon, NewUserIcon, MoonIcon, SunIcon, LogoutIcon } from '../Icons';
 import { authLogout } from "../../redux/actions/authentication";
 
 const LeftMenu = (props) => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
+  let history = useHistory();
 
   const latest_theme = useSelector((state) => state.theme.latest_theme.mode);
   const auth = useSelector((state) => state.auth);
@@ -19,13 +20,9 @@ const LeftMenu = (props) => {
     dispatch(applyTheme(new_theme));
   }
 
-  useEffect(() => {
-    if(!auth.login) {
-      props.history.push("/");
-    }
-  }, [auth])
   const handleLogout = () => {
-    dispatch(authLogout());
+    // dispatch(authLogout());
+    history.push("/login");
   }
   return (
     <Menu
@@ -52,7 +49,7 @@ const LeftMenu = (props) => {
       </Menu.Item>
 
       <Menu.Item key={`/organizationss`} className={"theme-icon"} >
-        <NavLink to="#" onClick={handleLogout} className="nav-text">
+        <NavLink to="/login" onClick={handleLogout} className="nav-text">
           <LogoutIcon />
         </NavLink>
       </Menu.Item>
